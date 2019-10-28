@@ -34,9 +34,9 @@ public class TestThread extends Thread {
         for (int i = 0; i < iter; i++) {
             int rand = random.nextInt(100);
             if (rand < 50) {
-                this.list.add(i);
+                this.list.add(rand);
             } else {
-                this.list.remove(0);
+                this.list.remove(rand % 50);
             }
         }
         elapsed2 = System.currentTimeMillis() - start;
