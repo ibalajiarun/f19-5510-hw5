@@ -12,7 +12,7 @@ Your assignment may not be graded otherwise.
 
 Note that this template may undergo modification throughout the homework. 
 The template consists of two packages: `lists` and `edu.vt.ece.hw5`. 
-The former consists of various implementations of Spin Locks provided in the textbook, 
+The former consists of linked list implementations discussed in the textbook, 
 while the latter is the template for this homework. 
 You may use ideas and code snippets from the former but you should only modify the latter package.
 
