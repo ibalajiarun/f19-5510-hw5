@@ -38,7 +38,7 @@ public class OptimisticList<T> {
     while (true) {
       Entry pred = this.head;
       Entry curr = pred.next;
-      while (curr.key <= key) {
+      while (curr.key < key) {
         pred = curr; curr = curr.next;
       }
       pred.lock(); curr.lock();
