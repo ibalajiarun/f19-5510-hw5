@@ -7,9 +7,11 @@ public class Benchmark {
         final int iters = Integer.parseInt(args[1]);
 
         final TestThread[] threads = new TestThread[threadCount];
+        final LockFreeBag<Integer> bag = new LockFreeBag<>();
+        final LockFreeList<Integer> list = new LockFreeList<>();
 
         for (int t = 0; t < threadCount; t++) {
-            threads[t] = new TestThread(iters);
+            threads[t] = new TestThread(iters, bag, list);
         }
 
         for (int t = 0; t < threadCount; t++) {

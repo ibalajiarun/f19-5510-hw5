@@ -11,10 +11,10 @@ public class TestThread extends Thread {
 
     private int iter;
 
-    TestThread(int iter) {
+    TestThread(int iter, LockFreeBag<Integer> bag, LockFreeList<Integer> list) {
         this.iter = iter;
-        this.bag = new LockFreeBag<>();
-        this.list = new LockFreeList<>();
+        this.bag = bag;
+        this.list = list;
     }
 
     @Override
